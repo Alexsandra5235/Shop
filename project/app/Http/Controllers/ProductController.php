@@ -10,7 +10,12 @@ class ProductController extends Controller
         return view('productAdd');
     }
 
-    public function add(){
-        return view('productAdd');
+    public function add(Request $request){
+        $validated = $request->validate([
+            'title' => 'required',
+            'price' => 'required',
+            'description' => 'required',
+            'status' => 'required'
+        ]);
     }
 }
