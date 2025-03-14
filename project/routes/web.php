@@ -1,11 +1,21 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RegistrationController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\MainController;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [MainController::class, 'home']);
 
-Route::get('/user/{id}/{name}/', function ($id, $name) {
-    return "Hello, " . $name . " " . $id;
-});
+Route::get('/sign', [RegistrationController::class, 'sign']);
+
+Route::get('/registration', [RegistrationController::class, 'register']);
+
+Route::get('/profile', [ProfileController::class, 'profile']);
+
+Route::get('/product/get/add', [ProductController::class, 'page_add']);
+
+Route::post('/product/add', [ProductController::class, 'add']);
+
+
