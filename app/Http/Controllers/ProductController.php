@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Profile;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function page_add(){
-        return view('productAdd');
+    public function page_add($id_profile){
+        $profile = Profile::all()->find($id_profile);
+        return view('productAdd',['profile'=>$profile]);
     }
 
     public function add(Request $request){
@@ -24,6 +26,8 @@ class ProductController extends Controller
         $product->price = $request->input('price');
         $product->description = $request->input('description');
         $product->status = $request->input('status');
+        $product->profile_id = $request->input('profile_id');
+
 
         $product->save();
 

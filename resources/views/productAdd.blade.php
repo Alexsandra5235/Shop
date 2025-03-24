@@ -24,6 +24,7 @@
                         <h2 class="text-uppercase text-center mb-5">Добавление товара</h2>
                         <form method="post" action="/product/add">
                             @csrf
+                            <input type="hidden" name="profile_id" id="profile_id" value="{{ $profile->id }}">
                             <div data-mdb-input-init class="form-outline mb-4">
                                 <input type="text" name="title" id="title" class="form-control form-control-lg" placeholder="Введите название товара"/>
                             </div>

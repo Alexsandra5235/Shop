@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('description');
             $table->string('price');
             $table->string('status');
+            $table->foreignId('profile_id')->constrained('profiles')->onDelete('cascade');
         });
     }
 

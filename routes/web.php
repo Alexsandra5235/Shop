@@ -18,7 +18,7 @@ Route::post('/registration/add/profile', [RegistrationController::class, 'addPro
 
 Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
 
-Route::get('/product/get/add', [ProductController::class, 'page_add']);
+Route::get('/product/get/add/{id_profile}', [ProductController::class, 'page_add']);
 
 Route::post('/product/add', [ProductController::class, 'add']);
 

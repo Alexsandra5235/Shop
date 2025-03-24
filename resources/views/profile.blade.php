@@ -65,7 +65,7 @@
                 <div class="card mb-4 mb-lg-0">
                     <div class="card-body p-0">
                         <ul class="list-group list-group-flush rounded-3">
-                            <a href="/product/get/add" class="list-group-item d-flex justify-content-between align-items-center p-3">
+                            <a href="/product/get/add/1" class="list-group-item d-flex justify-content-between align-items-center p-3">
                                 Добавить объявление
                             </a>
                             <a href="/product/show" class="list-group-item d-flex justify-content-between align-items-center p-3">
